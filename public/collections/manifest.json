@@ -1,0 +1,48 @@
+{
+  "name": "Gitmancer concept collection",
+  "cardCount": 20,
+  "source": "AI-generated fictional concept artwork",
+  "kind": "collection-sheets",
+  "sheets": [
+    {
+      "title": "The First Spark",
+      "image": "/collections/first-spark.png",
+      "cards": {
+        "from": 1,
+        "to": 5
+      },
+      "width": 1312,
+      "height": 1199
+    },
+    {
+      "title": "The Hidden Archive",
+      "image": "/collections/hidden-archive.png",
+      "cards": {
+        "from": 6,
+        "to": 10
+      },
+      "width": 1312,
+      "height": 1199
+    },
+    {
+      "title": "The Fractured Gate",
+      "image": "/collections/fractured-gate.png",
+      "cards": {
+        "from": 11,
+        "to": 15
+      },
+      "width": 1312,
+      "height": 1199
+    },
+    {
+      "title": "The Last Constellation",
+      "image": "/collections/last-constellation.png",
+      "cards": {
+        "from": 16,
+        "to": 20
+      },
+      "width": 1312,
+      "height": 1199
+    }
+  ]
+}

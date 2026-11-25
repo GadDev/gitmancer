@@ -84,3 +84,7 @@ Unit tests cover formula fixtures/invariants, caps, privacy, pagination, partial
 GitFut's read-only investigation inspired the architecture; links and the pinned revision are in [blueprint.md](blueprint.md). This MVP's application code and geometric illustrations were written for Gitmancer; no upstream code/assets/fonts were copied. Fontsource distributes Cormorant Garamond and DM Sans under the SIL Open Font License; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Framework/dependency notices remain with installed packages.
 
 Planning: [constitution](constitution.md) · [roadmap](roadmap.md) · [techstack](techstack.md).
+
+## Illustrated concept collection
+
+[View the twenty fictional cards](docs/card-collection.md), arranged across four five-card sheets. Original PNGs and their index are in `public/collections/`. These are visual references; the live renderer still uses the deterministic guild templates.
