@@ -1,8 +1,10 @@
 # Gitmancer — Techstack
 
+> Implementation update — 25 November 2026: the user authorized the template-first MVP and direct pushes to `main`. Next.js/React/TypeScript, Zod, Node SQLite, immutable snapshots and server PNG export are now implemented. Optional paid AI, deployment, gallery and batch generation remain future work. The original proposal/status labels below preserve the planning baseline; see README.md for the current implementation and limitations.
+
 Project: **Gitmancer**. Destination repository: [GadDev/gitmancer](https://github.com/GadDev/gitmancer). These choices were confirmed by the user after the original planning draft.
 
-Status: options and recommendations; the user has not selected a product stack. 25 November 2026.
+Status: current implementation uses Next.js, React, TypeScript, Zod, Node SQLite and server PNG rendering. The options below document the original proposals. 25 November 2026.
 
 ## Evidence
 
@@ -33,11 +35,11 @@ GitFut declares Next.js 16.2.9, React 19.2.4, TypeScript 5, Tailwind 4, ioredis,
 
 [ASSUMPTION — confirm: A1, A10] Allow models to return creative text/art direction only. Never execute returned HTML, SVG, JavaScript, URLs, or prompts as application instructions. Renderer text remains application-owned. Bound provider retries, image bytes, processing duration and enrichment requests.
 
-[STATED] No technology choices in this draft authorize implementation.
+[STATED] The user subsequently authorized the template-first implementation; no hosting purchase or paid AI was enabled.
 
 ## Open decisions
 
-- [OPEN] Adopt the suggested stack or choose another platform; no user-selected framework exists yet.
+- [IMPLEMENTED] Next.js/React/TypeScript, Zod, Node SQLite and Fontsource fonts were selected for the authorized MVP. Hosting remains open.
 - [OPEN] Host, database driver or managed persistence provider, backup/retention/deletion policy, budget and plan eligibility.
 - [OPEN] Runtime validator, AI providers/models, entitlement for enrichment, job execution mechanism, and future authentication.
 - [OPEN] Final font and illustration licenses. Project name Gitmancer and destination repository GadDev/gitmancer are confirmed.

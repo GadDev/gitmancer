@@ -1,8 +1,10 @@
 # Gitmancer — Constitution
 
+> Implementation update — 25 November 2026: the user authorized the template-first MVP and direct pushes to `main`. Next.js/React/TypeScript, Zod, Node SQLite, immutable snapshots and server PNG export are now implemented. Optional paid AI, deployment, gallery and batch generation remain future work. The original proposal/status labels below preserve the planning baseline; see README.md for the current implementation and limitations.
+
 Project: **Gitmancer**. Destination repository: [GadDev/gitmancer](https://github.com/GadDev/gitmancer). These choices were confirmed by the user after the original planning draft.
 
-Status: planning draft, 25 November 2026. No implementation is authorized by this document.
+Status: planning baseline with an authorized template-first MVP now implemented. No paid service or deployment was enabled.
 
 ## Source and status
 
@@ -18,7 +20,7 @@ The user's brief is the requirements source. The read-only GitFut investigation 
 4. [STATED] Explain mappings with explicit formulas, thresholds, caps, and worked examples; these are playful design choices, not judgments of engineering ability.
 5. [STATED] Handle sparse profiles, new accounts, unavailable private activity, bots, forks, and unusual activity. Avoid rewarding commit spam or equating visibility with ability.
 6. [STATED] Design secure server-side token handling, refresh/caching, scoring versions, PNG download, shareable URLs, and mobile accessibility.
-7. [STATED] Investigate GitFut read-only. Do not modify its repository or start implementing the proposed product during this task.
+7. [STATED — original investigation] GitFut was reviewed read-only. The user subsequently authorized Gitmancer implementation and direct pushes to main; GitFut remains unchanged.
 8. [STATED] Ground repository claims in source references, distinguish assumptions from facts, and check license/attribution before recommending reuse.
 
 ## Proposed operating rules

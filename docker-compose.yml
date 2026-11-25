@@ -1,0 +1,14 @@
+services:
+  gitmancer:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+      APP_ORIGIN: ${APP_ORIGIN:-http://localhost:3000}
+      GITMANCER_DATA_DIR: /app/data
+    volumes:
+      - gitmancer-data:/app/data
+    restart: unless-stopped
+volumes:
+  gitmancer-data:

@@ -1,5 +1,7 @@
 # Gitmancer — Evidence and Product Blueprint
 
+> Implementation update — 25 November 2026: the user authorized the template-first MVP and direct pushes to `main`. Next.js/React/TypeScript, Zod, Node SQLite, immutable snapshots and server PNG export are now implemented. Optional paid AI, deployment, gallery and batch generation remain future work. The original proposal/status labels below preserve the planning baseline; see README.md for the current implementation and limitations.
+
 Project: **Gitmancer**. Destination repository: [GadDev/gitmancer](https://github.com/GadDev/gitmancer). These choices were confirmed by the user after the original planning draft.
 
 Prepared 25 November 2026. Scope: read-only source investigation and proposed design. No upstream repository changes, commits, PRs, deployments, application implementation, or live GitHub-profile integration tests were performed.
@@ -14,7 +16,7 @@ The recommendation is `[ASSUMPTION — confirm: A1, A2]`, not a user-selected ar
 
 | ID | Status | Meaning |
 |---|---|---|
-| R0 | STATED | Project name: Gitmancer. Destination: GadDev/gitmancer. Publishing these four planning documents is authorized; application implementation is not part of this task. |
+| R0 | STATED | Project name: Gitmancer. Destination: GadDev/gitmancer. The user later authorized the template-first application implementation and direct pushes to main. Paid AI and deployment have not been enabled. |
 | R1 | STATED | Personalized original fantasy cards for developer community members, based on GitHub activity; Magic: The Gathering inspiration. |
 | R2 | STATED | Single public username first; member gallery and batch generation later. |
 | R3 | STATED | Reproducible scoring/game balance; separate facts, derived values, and creative content. |
@@ -99,7 +101,7 @@ The implementation also forces founder overalls of 93/91 and includes an icon al
 ### Semantic traps to fix during adaptation
 
 1. `issues_closed` is assigned `totalIssueContributions`, which measures issues **opened**. `prs_to_others` is assigned PR contribution totals without a repository-ownership filter proving the name. `recent_commits` includes the restricted contribution lump, which is not a private-commit count. [signals.ts, lines 57–63](https://github.com/Younesfdj/gitfut/blob/e1a3d80e207db727a2f664c82117ab5d2b771d59/lib/github/signals.ts#L57-L63); official [field definitions](https://docs.github.com/en/graphql/reference/users#contributionscollection).
-2. The contributed-language threshold is described as three commits, but it checks `contributions.totalCount`. The official [commit aggregation schema](https://docs.github.com/en/graphql/reference/commits#commitcontributionsbyrepository) says each contribution represents a day. This is a threshold on contribution-day records, not a sum of their `commitCount` values. [client.ts, lines 644–649](https://github.com/Younesfdj/gitfut/blob/e1a3d80e207db727a2f664c82117ab5d2b771d59/lib/github/client.ts#L644-L649).
+2. The contributed-language threshold is described as three commits and checks `contributions.totalCount`. The official [commit aggregation schema](https://docs.github.com/en/graphql/reference/commits#commitcontributionsbyrepository) says each contribution represents a day. Correction to the original review: the current connection description defines totalCount as commits aggregated across days. Interpreting it as a node count was incorrect. The MVP avoids this ambiguity by summing explicit commitCount values from fetched daily nodes and uses no language threshold. [client.ts, lines 644–649](https://github.com/Younesfdj/gitfut/blob/e1a3d80e207db727a2f664c82117ab5d2b771d59/lib/github/client.ts#L644-L649).
 3. `active_years` counts distinct repository creation/push endpoint years, bounded by age. It is a proxy, not the number of years with recorded contributions. [signals.ts, lines 24–38](https://github.com/Younesfdj/gitfut/blob/e1a3d80e207db727a2f664c82117ab5d2b771d59/lib/github/signals.ts#L24-L38).
 4. Summed top-100 stars are not necessarily all owned stars. Owned repository queries have no explicit public-visibility constraint. Reuse needs a clearly defined public data contract, not just labels saying “public.”
 5. Redis TLS verification is explicitly disabled for `rediss://` in [redis.ts, lines 9–18](https://github.com/Younesfdj/gitfut/blob/e1a3d80e207db727a2f664c82117ab5d2b771d59/lib/redis.ts#L9-L18). Restore certificate validation/configured trust rather than carrying that deployment-specific setting forward.

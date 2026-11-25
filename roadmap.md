@@ -1,12 +1,14 @@
 # Gitmancer — Roadmap
 
+> Implementation update — 25 November 2026: the user authorized the template-first MVP and direct pushes to `main`. Next.js/React/TypeScript, Zod, Node SQLite, immutable snapshots and server PNG export are now implemented. Optional paid AI, deployment, gallery and batch generation remain future work. The original proposal/status labels below preserve the planning baseline; see README.md for the current implementation and limitations.
+
 Project: **Gitmancer**. Destination repository: [GadDev/gitmancer](https://github.com/GadDev/gitmancer). These choices were confirmed by the user after the original planning draft.
 
-Status: proposed sequence, not committed implementation work. 25 November 2026.
+Status: template-first phases 1–3 implemented; optional AI, community extensions and deployment remain future work. 25 November 2026.
 
 ## Source and status
 
-The user requires a single-username MVP, with gallery/batch extensions later, and a read-only investigation now. The phase assignments and implementation dependencies below are recommendations `[ASSUMPTION — confirm: A7]`. Other A# IDs match `constitution.md`, `techstack.md`, and the detailed `blueprint.md`. Nothing below authorizes repository changes.
+The user requires a single-username MVP, with gallery/batch extensions later, and a read-only investigation now. The phase assignments and implementation dependencies below are recommendations `[ASSUMPTION — confirm: A7]`. Other A# IDs match `constitution.md`, `techstack.md`, and the detailed `blueprint.md`. The later implementation authorization is recorded above.
 
 ## Phase 0 — Evidence and decisions
 
